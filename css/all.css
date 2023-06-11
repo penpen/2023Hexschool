@@ -464,6 +464,7 @@ body a:active, body a:visited {
   gap: 12px;
   border: 1px solid #F2F2F2;
   border-radius: 16px;
+  position: relative;
 }
 .filter-main .filter-dropdown {
   position: relative;
@@ -491,10 +492,12 @@ body a:active, body a:visited {
   padding: 20px 0;
   border-radius: 16px;
   background-color: #FFFFFF;
+  width: 240px;
 }
 .filter-main .dropdown-menu a {
   padding: 4px 40px;
   color: #020202;
+  display: block;
 }
 .filter-main .dropdown-menu a:hover {
   background-color: #F2F2F2;
@@ -668,6 +671,9 @@ body a:active, body a:visited {
     font-size: 32px;
     line-height: 120%;
   }
+  .tool-filters {
+    flex-direction: column;
+  }
   .cardlist {
     justify-content: center;
   }
@@ -695,6 +701,13 @@ body a:active, body a:visited {
   padding-right: 32px;
 }
 
+@media (max-width: 767px) {
+  .AI-start .Headling01B {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
 .AI-footer {
   margin-top: 80px;
   margin-bottom: 8px;
@@ -720,30 +733,59 @@ body a:active, body a:visited {
      object-fit: cover;
 }
 
-.footer-Menu {
+.footer-Bottom {
   border-top: solid 1px #FFFFFF;
-  padding: 20px 0;
+  padding: 32px 0;
 }
-.footer-Menu ul {
+
+.footer-Menu {
   display: flex;
   gap: 20px;
+  /*
+  li{
+      margin: 12px 0;
+      .material-icons{
+          font-size: 16px;
+      }
+  }
+  .copyright
+  {
+      padding-right: 80px;
+  }
+  */
 }
-.footer-Menu li {
-  margin: 12px 0;
-}
-.footer-Menu li .material-icons {
-  font-size: 16px;
-}
-.footer-Menu .copyright {
-  padding-right: 80px;
-}
-.footer-Menu .backToTop {
+
+.backToTop {
   position: absolute;
   right: 0;
 }
-.footer-Menu .backToTop a {
+.backToTop a {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+}
+
+.footer-Share {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .AI-footer .Display03B {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 120%;
+  }
+  .footer-Home {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .footer-Menu {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .backToTop {
+    right: 24px;
+  }
 }/*# sourceMappingURL=all.css.map */

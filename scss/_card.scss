@@ -60,6 +60,7 @@
     gap:12px;
     border: 1px solid $Black20;
     border-radius: 16px;
+    position: relative;
     .filter-dropdown {
         position: relative;
       }
@@ -88,9 +89,11 @@
         padding: 20px 0;
         border-radius: 16px;
         background-color: $Black0;
+        width:240px;
         a {
             padding: 4px 40px;
             color: $Black100;
+            display: block;
             &:hover {
                 background-color: $Black20;
               }
@@ -274,6 +277,9 @@
                 line-height: 120%;
             }
         }
+    }
+    .tool-filters{
+        flex-direction: column;
     }
     .cardlist{
         justify-content: center;
