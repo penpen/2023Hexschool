@@ -284,6 +284,8 @@ body a:active, body a:visited {
 .service-items {
   margin-top: 80px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 .service-items li {
@@ -348,6 +350,8 @@ body a:active, body a:visited {
 .coworker-recommends {
   margin-top: 160px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
 }
 .coworker-recommends li {
@@ -400,9 +404,17 @@ body a:active, body a:visited {
     flex-direction: column;
     align-items: center;
   }
+  .service-items li {
+    padding: 40px 20px;
+    width: 351px;
+  }
   .coworker-recommends {
     flex-direction: column;
     align-items: center;
+  }
+  .coworker-recommends li {
+    padding: 20px 20px;
+    width: 351px;
   }
 }
 /* 以下自訂 */
@@ -511,24 +523,27 @@ body a:active, body a:visited {
   align-items: center;
   gap: 10px;
 }
-.filter-subs .filter-sub {
-  padding: 8px 16px;
-}
 .filter-subs a {
   color: #919191;
   text-decoration: none;
   display: block;
+  border-radius: 16px;
+  padding: 8px 16px;
+  white-space: nowrap;
 }
 .filter-subs a:active, .filter-subs a:visited {
   color: #919191;
 }
-.filter-subs .active {
-  background-color: #F2F2F2;
-  border-radius: 16px;
-}
-.filter-subs .active a {
+.filter-subs a:hover {
   color: #020202;
   font-weight: 700;
+  background-color: #F2F2F2;
+}
+.filter-subs .active a {
+  cursor: default;
+  color: #020202;
+  font-weight: 700;
+  background-color: #F2F2F2;
 }
 
 .filter-sort .sort-dropdown {
@@ -573,6 +588,7 @@ body a:active, body a:visited {
 .cardlist {
   display: flex;
   gap: 24px;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 40px;
 }
@@ -651,7 +667,7 @@ body a:active, body a:visited {
 .tool-page li.active, .tool-page li.active:hover {
   background-color: #020202;
   color: #FFFFFF;
-  cursor: initial;
+  cursor: default;
 }
 .tool-page li:hover {
   background-color: #F2F2F2;
@@ -671,11 +687,29 @@ body a:active, body a:visited {
     font-size: 32px;
     line-height: 120%;
   }
-  .tool-filters {
-    flex-direction: column;
+  .filter-subs {
+    margin: 16px auto 0 auto;
+    order: 1;
+    overflow-x: scroll;
+    /* 隱藏 x 軸 */
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  }
+  .filter-subs::-webkit-scrollbar {
+    display: none;
   }
   .cardlist {
+    margin-top: 48px;
     justify-content: center;
+  }
+  .card {
+    width: 351px;
+  }
+  .card-img {
+    width: 351px;
+    height: 263px;
   }
 }
 .AI-start {

@@ -28,3 +28,15 @@ $('.sort-dropdown-btn').click(function(e) {
 $('.filter-dropdown-btn').click(function(e) {
   $('.filter-dropdown .dropdown-menu').toggleClass('show');
 });
+
+$('.filter-subs li').on('click',function(e){
+  e.preventDefault();
+  $('.filter-subs li').removeClass('active');
+  $(this).addClass('active');
+});
+
+$('.tool-page li').on('click',function(e){
+  e.preventDefault();
+  $('.tool-page li').removeClass('active');
+  $(this).addClass('active');
+});

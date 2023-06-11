@@ -108,25 +108,29 @@
     display: flex;
     align-items: center;
     gap:10px;
-    
-    .filter-sub{
-        padding: 8px 16px;
-    }
     a{
         color: $Black60;
         text-decoration: none;
         display: block;
+        border-radius: 16px;
+        padding: 8px 16px;
+        white-space:nowrap;
         &:active,&:visited
         {
             color: $Black60;
         }
-    }
-    .active{
-        background-color:$Black20;
-        border-radius: 16px;
-        a{
+        &:hover{
             color:$Black100;
-            font-weight: 700;  
+            font-weight: 700;
+            background-color: $Black20;
+        }
+    }
+    .active{  
+        a{
+            cursor: default;
+            color:$Black100;
+            font-weight: 700;
+            background-color:$Black20;
         }
     }
     
@@ -181,6 +185,7 @@
 .cardlist{
     display: flex;
     gap:24px;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -253,7 +258,7 @@
         &.active, &.active:hover{
             background-color: $Black100;
             color: $Black0;
-            cursor: initial;
+            cursor: default;
         }
         &:hover{
             background-color: $Black20;
@@ -278,10 +283,28 @@
             }
         }
     }
-    .tool-filters{
-        flex-direction: column;
+    .filter-subs{
+        margin: 16px auto 0 auto;
+        order: 1;
+        overflow-x: scroll;
+          /* 隱藏 x 軸 */
+          /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
     .cardlist{
+        margin-top: 48px;
         justify-content: center;
+    }
+    .card{
+        width: 351px;
+    }
+    .card-img{
+        width: 351px;
+        height: 263px;
     }
 }

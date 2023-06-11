@@ -15,6 +15,8 @@
 .service-items{
     margin-top: 80px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     li{
         border: 1px solid $Black80;
@@ -77,6 +79,8 @@
 {
     margin-top: 160px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
     li{
         width: 416px;
@@ -131,9 +135,17 @@
     .service-items{
         flex-direction: column;
         align-items: center;
+        li{
+            padding: 40px 20px;
+            width: 351px;
+        }
     }
     .coworker-recommends{
         flex-direction: column;
         align-items: center;
+        li{
+            padding: 20px 20px;
+            width: 351px;
+        }
     }
 }
