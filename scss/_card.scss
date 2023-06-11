@@ -113,6 +113,10 @@
         color: $Black60;
         text-decoration: none;
         display: block;
+        &:active,&:visited
+        {
+            color: $Black60;
+        }
     }
     .active{
         background-color:$Black20;
@@ -258,4 +262,20 @@
         }
     }
 
+}
+
+@media(max-width: 767px){
+    .AI-tool{
+        border-radius: 20px;
+        h2{
+            &.Display03B{
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 120%;
+            }
+        }
+    }
+    .cardlist{
+        justify-content: center;
+    }
 }

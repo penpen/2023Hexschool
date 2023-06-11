@@ -42,9 +42,13 @@
         padding-right: 80px;
     }
     .backToTop{
+        position: absolute;
+        right: 0;
+        a{
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 12px;
+        }
     }
 }

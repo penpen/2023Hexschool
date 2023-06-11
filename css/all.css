@@ -194,17 +194,43 @@ body a:active, body a:visited {
   text-align: right;
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .motin img {
   display: block;
+  animation-name: Move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.motin .grass1 {
+  animation-delay: 0.6s;
+}
+.motin .grass2 {
+  animation-delay: 0.3s;
+}
+.motin .grass3 {
+  animation-delay: 0s;
 }
 
+@keyframes Move {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 @media (max-width: 767px) {
   .top-navbar {
     height: 80px;
   }
   .top-navbar img {
     width: 147px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .top-navbar .navbar-btn {
     display: block;
@@ -222,10 +248,21 @@ body a:active, body a:visited {
   .top-navbar .navbar-collapse.show {
     display: flex;
   }
+  .top-navbar .material-icons {
+    display: none;
+  }
+  .top-navbar .material-icons.show {
+    display: block;
+  }
   .top-title .Display02B {
     font-weight: 900;
     font-size: 48px;
     line-height: 120%;
+  }
+  .motin img {
+    width: 117px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .AI-service {
@@ -234,6 +271,8 @@ body a:active, body a:visited {
 
 .service-title {
   display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
 .service-title h2 {
   width: 33.33%;
@@ -337,6 +376,35 @@ body a:active, body a:visited {
   gap: 4px;
 }
 
+@media (max-width: 767px) {
+  .service-title {
+    flex-direction: column;
+  }
+  .service-title h2 {
+    width: 100%;
+  }
+  .service-title p {
+    width: 100%;
+  }
+  .service-title .Headling03B {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .service-title .Headling01B {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .service-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .coworker-recommends {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* 以下自訂 */
 .AI-tool {
   background-color: #FFFFFF;
@@ -447,6 +515,9 @@ body a:active, body a:visited {
   color: #919191;
   text-decoration: none;
   display: block;
+}
+.filter-subs a:active, .filter-subs a:visited {
+  color: #919191;
 }
 .filter-subs .active {
   background-color: #F2F2F2;
@@ -588,6 +659,19 @@ body a:active, body a:visited {
   color: #FFFFFF;
 }
 
+@media (max-width: 767px) {
+  .AI-tool {
+    border-radius: 20px;
+  }
+  .AI-tool h2.Display03B {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .cardlist {
+    justify-content: center;
+  }
+}
 .AI-start {
   margin-top: 80px;
   display: flex;
@@ -654,12 +738,12 @@ body a:active, body a:visited {
   padding-right: 80px;
 }
 .footer-Menu .backToTop {
+  position: absolute;
+  right: 0;
+}
+.footer-Menu .backToTop a {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-}
-
-.AI-tool, .AI-footer, .AI-service, .AI-start {
-  display: none;
 }/*# sourceMappingURL=all.css.map */

@@ -1,6 +1,7 @@
 //AI-top
 $(".navbar-btn").click(function () {
   $(".navbar-collapse").toggleClass("show");
+  $(".material-icons").toggleClass("show");
 });
 
 
