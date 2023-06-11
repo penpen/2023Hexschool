@@ -1,0 +1,107 @@
+.AI-service{
+    margin-top: 160px;
+}
+.service-title{
+    display: flex;
+    h2{
+        width: 33.33%;
+    }
+    p{
+        width: 66.66%;
+    }
+}
+.service-items{
+    margin-top: 80px;
+    display: flex;
+    gap: 24px;
+    li{
+        border: 1px solid $Black80;
+        border-radius: 16px;
+        padding: 80px 40px;
+        display: flex;
+        flex-direction: column;
+        width: 416px;
+        gap: 20px;
+    }
+    img{
+        display: block;
+    }
+}
+.coworker-title{
+    margin-top: 160px;
+}
+.coworker-logos{
+    margin-top: 80px;
+    ul{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        overflow-x: scroll;
+        position: relative;
+        /* 隱藏 x 軸 */
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+          }
+        img{
+            width:160px;
+            height:40px;
+            max-width:initial;
+        }
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.991615) 11.79%, rgba(0, 0, 0, 0.967585) 21.38%, rgba(0, 0, 0, 0.9296) 29.12%, rgba(0, 0, 0, 0.879348) 35.34%, rgba(0, 0, 0, 0.818519) 40.37%, rgba(0, 0, 0, 0.7488) 44.56%, rgba(0, 0, 0, 0.671881) 48.24%, rgba(0, 0, 0, 0.589452) 51.76%, rgba(0, 0, 0, 0.5032) 55.44%, rgba(0, 0, 0, 0.414815) 59.63%, rgba(0, 0, 0, 0.325985) 64.66%, rgba(0, 0, 0, 0.2384) 70.88%, rgba(0, 0, 0, 0.153748) 78.62%, rgba(0, 0, 0, 0.0737185) 88.21%, rgba(0, 0, 0, 0) 100%);
+            width:196px;
+            height: 40px;
+        }
+        &::before{
+            left: 0;           
+        }
+        &::after{
+            right: 0;
+            transform: rotate(-180deg);
+        }
+    }
+    ul:not(:first-child){
+        margin-top: 20px;
+    }
+}
+.coworker-recommends
+{
+    margin-top: 160px;
+    display: flex;
+    gap: 24px;
+    li{
+        width: 416px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .starts{
+        display: flex;
+        gap: 4px;
+    }
+    p{
+        color: $Black20;
+    }
+    .coworker-user
+    {
+        display: flex;
+        gap: 16px;
+    }
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+    }
+}

@@ -1,0 +1,14 @@
+@import "variable";
+@import "reset";
+@import "main";
+@import "top";
+@import "service";
+@import "card";
+@import "start";
+@import "footer";
+
+.AI-tool, .AI-footer,.AI-service,.AI-start{
+    display: none;
+}
+
+//.AI-tool, .AI-footer,.AI-top,.AI-service,.AI-start

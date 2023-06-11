@@ -1,0 +1,80 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: $Black100;
+    /*overflow-x: hidden;*/
+    line-height: 150%;
+    font-size: 16px;
+    color: $Black0;
+    a {
+        text-decoration:none;
+        color: $Black0;
+        &:active,&:visited
+        {
+            color: $Black0;
+        }
+    }
+}
+.container
+{
+    margin: 0 auto;
+}
+
+.Display01B{
+    font-weight: 900;
+    font-size: 160px;
+    line-height: 120%;
+}
+
+.Display02B{
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 120%;
+}
+
+.Display03B{
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 120%;
+}
+
+.Headling01B{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 120%;
+}
+
+.Headling03B{
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.Headling06B{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.Small{
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.SmallB{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.BodyB{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.container
+{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
